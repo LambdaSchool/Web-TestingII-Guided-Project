@@ -4,6 +4,26 @@ import Container from './Container';
 
 afterEach(rtl.cleanup);
 
+// const quotes = [
+//   { id: '1', text: 'be mentored or be bad' },
+//   { id: '2', text: 'have fun' },
+//   { id: '3', text: 'use network tab' },
+// ];
+
+jest.mock('axios', () => {
+  return {
+    get: () => {
+      return Promise.resolve({
+        data: [
+          { id: '1', text: 'be mentored or be bad' },
+          { id: '2', text: 'have fun' },
+          { id: '3', text: 'use network tab' },
+        ],
+      });
+    },
+  };
+});
+
 // 1- we need stuff from the library but the wrapper as well
 // 2- remember about cleaning up after each test
 // 3- prefer regular expressions to raw text
