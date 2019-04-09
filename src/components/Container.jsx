@@ -5,7 +5,7 @@ export default class Container extends Component {
   render() {
     return (
       <div className='container-hello-world'>
-        Hello, World!
+        Hello, World! {this.props.lady}
       </div>
     );
   }
