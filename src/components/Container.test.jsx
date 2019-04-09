@@ -15,7 +15,7 @@ describe('Container', () => {
   // actual tests
   it('outputs "hello world"', () => {
     const wrapper = rtl.render(<Container />);
-    expect(wrapper.getByText(/w0rld/i));
+    expect(wrapper.getByText(/world/i));
   });
 
   it('does not output "loading..."', () => {
