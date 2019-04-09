@@ -4,12 +4,6 @@ import Container from './Container';
 
 afterEach(rtl.cleanup);
 
-// const quotes = [
-//   { id: '1', text: 'be mentored or be bad' },
-//   { id: '2', text: 'have fun' },
-//   { id: '3', text: 'use network tab' },
-// ];
-
 jest.mock('axios', () => {
   return {
     get: () => {
