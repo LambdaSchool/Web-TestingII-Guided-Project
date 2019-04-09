@@ -20,7 +20,7 @@ describe('Quotes', () => {
     expect(wrap.getByText(/sad/i));
   });
 
-  it('returns a "sad" message if quotes array is empty', () => {
+  it('returns a "sad" message if no quotes prop', () => {
     const wrap = rt.render(<Quotes />);
     expect(wrap.getByText(/sad/i));
   });
