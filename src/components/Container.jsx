@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import Quotes from './Quotes';
 import './Container.less';
 
 // fetch quotes from a quotes api and display them
@@ -20,11 +21,7 @@ export default class Container extends Component {
       <div className='container-hello-world'>
         Hello, World! {this.props.lady}
 
-        {
-          this.state.quotes.map(q => (
-            <div key={q.id}>{q.text}</div>
-          ))
-        }
+        <Quotes quotes={this.state.quotes} />
 
         <button onClick={this.getQuotes}>
           get those quotes
